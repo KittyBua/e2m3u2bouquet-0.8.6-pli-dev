@@ -71,3 +71,4 @@ v0.8.6 - OE-A - Pli-dev Fix
     FIX Depends: python3-image, python3-imaging, python3-requests 
     https://www.suls.co.uk/enigma2-iptv-bouquets-with-epg/
     Fixed by @atvcaptain , @Huevos , @BliNeR-KeY, @KittyBua
+    My ipk for pli Dev : https://app.box.com/s/3rr8tdlos814i0v0zfwz8xs9lxjgbzhs
