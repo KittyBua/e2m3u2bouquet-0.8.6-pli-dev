@@ -1,0 +1,54 @@
+ipk install - gui restart 
+
+go with ftp in 
+
+cd /etc/enigma2/e2m3u2bouquet
+
+and try this 
+
+./e2m3u2bouquet.py -m "http://provider_url/get.php?username=YOURUSERNAME&password=YOURPASSWORD&type=m3u_plus&output=ts" -e "http://provider_url/xmltv.php?username=YOURUSERNAME&password=YOURPASSWORD" -i
+
+ready restart gui and go to epg Importer
+
+finish 
+
+
+
+
+or the py in 
+
+cd /etc/enigma2/e2m3u2bouquet.py 
+
+chmod 777 e2m3u2bouquet.py
+
+and ibstall 
+
+opkg update
+
+opkg install python3-image python3-imaging python3-requests
+
+and try this 
+
+cd /etc/enigma2/e2m3u2bouquet
+
+and try this with your Account:
+
+./e2m3u2bouquet.py -m "http://provider_url/get.php?username=YOURUSERNAME&password=YOURPASSWORD&type=m3u_plus&output=ts" -e "http://provider_url/xmltv.php?username=YOURUSERNAME&password=YOURPASSWORD" -i
+
+ready restart gui and go to epg Importer
+
+finish 
+
+easy is the ipk install 
+
+more infos 
+
+https://www.suls.co.uk/enigma2-iptv-bouquets-with-epg/
+
+
+and cron 
+
+https://www.suls.co.uk/e2m3u2bouquet-automation-via-cron-job/
+
+finish 
+
