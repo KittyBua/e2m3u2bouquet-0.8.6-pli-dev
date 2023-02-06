@@ -1,3 +1,12 @@
+Update: Auto Generator fix all in one 
+
+https://github.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/blob/master/generator.html
+
+!!!!!!!!!!!!!!!!!!!
+
+
+or: 
+
 ipk install - gui restart 
 
 go with ftp in 
