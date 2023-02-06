@@ -65,7 +65,7 @@ of entered using the remote
 * OE-A Porting Python 2 Code to Python 3 / Works on 2.7.18 / 3.9.6 / 3.9.7 / 3.10.1 / 3.10.2
 * Fixed by @atvcaptain , @Huevos , @BliNeR-KeY
 
-v0.8.6 - OE-A - Pli-dev Fix without GUI
+v0.8.6 - OE-A - Pli-dev Fix without GUI + Auto Generator fix 
 
     OE-A Porting Python 2 Code to Python 3 / Works on 2.7.18 / 3.9.6 / 3.9.7 / 3.10.1 / 3.10.2
     FIX Depends: python3-image, python3-imaging, python3-requests 
