@@ -1,6 +1,4 @@
-Update: Auto Generator fix all in one 
-
-FTP and make Folder in /etc/enigma2/e2m3u2bouquet and start the Skript in telnet : 
+Update: Auto Generator fix all in one (fixed)
 
 https://github.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/blob/master/generator.html
 
