@@ -82,7 +82,7 @@
             }
         }
 
-        var installcmd = "opkg install --force-reinstall \"https://github.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/raw/master/enigma2-plugin-extensions-e2m3u2bouquet_0.8.6_all.ipk\" && wget -O /etc/enigma2/e2m3u2bouquet/config.xml \"https://raw.githubusercontent.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/master/generator_config.xml\" && sed -i 's#hhhhh#myhost#g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/uuuuu/myusername/g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/ppppp/mypassword/g' /etc/enigma2/e2m3u2bouquet/config.xml && /etc/enigma2/e2m3u2bouquet/./e2m3u2bouquet.py && \"(crontab -l ; echo "0 6,18 * * * /etc/enigma2/e2m3u2bouquet/e2m3u2bouquet.py")| crontab -"/ && reboot";
+        var installcmd = "opkg install --force-reinstall \"https://github.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/raw/master/enigma2-plugin-extensions-e2m3u2bouquet_0.8.6_all.ipk\" && wget -O /etc/enigma2/e2m3u2bouquet/config.xml \"https://raw.githubusercontent.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/master/generator_config.xml\" && sed -i 's#hhhhh#myhost#g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/uuuuu/myusername/g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/ppppp/mypassword/g' /etc/enigma2/e2m3u2bouquet/config.xml && /etc/enigma2/e2m3u2bouquet/./e2m3u2bouquet.py && '(crontab -l ; echo "0 6,18 * * * /etc/enigma2/e2m3u2bouquet/e2m3u2bouquet.py")| crontab -' && reboot";
         var button = document.getElementById('generate');
         button.addEventListener('click', onClick);
     </script> 
