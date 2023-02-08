@@ -1,4 +1,4 @@
-# Enigma2 IPTV m3u to bouquet plugin in Python3
+# Enigma2 IPTV m3u to bouquet plugin Python3
 # OPENPLI 8.1 + OPENPLI DEV (ipk)
 
 Plugin fronted for e2m3u2bouquet (Enigma2 IPTV m3u parser and bouquet creator)
