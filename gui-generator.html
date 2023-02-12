@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>IPTV Bouquet Install Generator</title>
+        <style>
+        h1 {
+            font-size: 1.5em
+        }
+        input, button {
+            min-width: 200px;
+            min-height: 36px;
+            border: 1px solid grey;
+            padding: 3px;
+        }
+        button {
+            min-width: 72px;
+        }
+        label, input, button {
+            display: block;
+        }
+        input {
+            margin-bottom: 1em;
+        } 
+        pre {
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            overflow: auto;
+            padding: 1em;
+            white-space: pre-wrap;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+        .hidden {
+            display: none;
+        }
+        </style> 
+    </head>
+<body>
+    <h1>IPTV Bouquet Install Generator</h1>
+
+    <p>This is a simple page that will generate a install command for the plugin.</p>
+
+    <p>This page <strong>does not</strong> send or store any of your details it runs entirley within your browser.</p>
+
+    <p>To use enter your providers hostname and port e.g. http://www.suls.co.uk:8080 then your username and password.</p>
+
+    <p>Once you press <strong>Generate</strong> the one line install command will be shown. Connect to your box (i.e. using PuTTY) and then paste in the command.</p>
+
+    <label for="host">Host</label>
+    <input id="host" placeholder=" e.g. http://www.suls.co.uk:8080">
+    <label for="username">Username</label>
+    <input id="username" placeholder="username">
+    <label for="password">Password</label>
+    <input id="password" placeholder="password"> 
+    <button id="generate">Generate</button>
+
+    <pre id="output" class="hidden"></pre>
+
+    <script type="text/javascript"> 
+        function onClick() { 
+            var host = document.getElementById('host').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var output = document.getElementById('output');
+            output.classList.remove('hidden');
+
+            if (inputsAreEmpty(host, username, password)) {
+                output.textContent = 'Error: need to enter host, username and password';
+            return;
+            }
+
+            var displaycmd = installcmd.replace('myhost', host).replace('myusername', username).replace('mypassword', password); 
+            output.textContent = displaycmd; 
+            return;
+        }
+
+        function inputsAreEmpty(provider,username, password) {
+            if (provider === '' || username === '' || password === '') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var installcmd = "opkg install --force-reinstall \"https://github.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/raw/master/enigma2-plugin-gui-e2m3u2bouquet-ipk_0.8.6_all.ipk\" && wget -O /etc/enigma2/e2m3u2bouquet/config.xml \"https://raw.githubusercontent.com/KittyBua/e2m3u2bouquet-0.8.6-pli-dev/master/generator_config.xml\" && sed -i 's#hhhhh#myhost#g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/uuuuu/myusername/g' /etc/enigma2/e2m3u2bouquet/config.xml && sed -i 's/ppppp/mypassword/g' /etc/enigma2/e2m3u2bouquet/config.xml && /etc/enigma2/e2m3u2bouquet/./e2m3u2bouquet.py && echo -e '\\n0 6,18 * * * /etc/enigma2/e2m3u2bouquet/e2m3u2bouquet.py' >> /var/spool/cron/crontabs/root && reboot";
+        var button = document.getElementById('generate');
+        button.addEventListener('click', onClick);
+    </script> 
+</body>
+</html>
