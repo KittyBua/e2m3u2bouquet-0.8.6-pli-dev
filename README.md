@@ -1,5 +1,5 @@
 # Enigma2 IPTV m3u to bouquet Python3
-# OPENPLI DEVELOPER - (ipk) + EPG - Auto 
+# OPENPLI DEVELOPER - (ipk) + EPG - Auto + Gui
 
 e2m3u2bouquet (Enigma2 IPTV m3u parser and bouquet creator)
 
@@ -10,3 +10,5 @@ e2m3u2bouquet (Enigma2 IPTV m3u parser and bouquet creator)
 * FIX Depends: python3-image, python3-imaging, python3-requests 
 * https://www.suls.co.uk/enigma2-iptv-bouquets-with-epg/
 * Fixed by @atvcaptain , @Huevos , @BliNeR-KeY, @KittyBua
+
+*Add GUI Generator and ipk fixes ! 
